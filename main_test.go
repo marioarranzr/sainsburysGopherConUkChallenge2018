@@ -1,6 +1,8 @@
 package main
 
-import "testing"
+import (
+	"testing"
+	)
 
 func Test_calculateHouses(t *testing.T) {
 	type args struct {
@@ -27,9 +29,20 @@ func Test_calculateHouses(t *testing.T) {
 			want: 2,
 		},
 	}
+
+	// calculateHouses
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := calculateHouses(tt.args.s); got != tt.want {
+				t.Errorf("count() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+
+	// calculateHousesWinner
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := calculateHousesWinner(tt.args.s); got != tt.want {
 				t.Errorf("count() = %v, want %v", got, tt.want)
 			}
 		})
