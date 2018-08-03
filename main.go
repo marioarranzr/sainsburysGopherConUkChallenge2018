@@ -39,6 +39,7 @@ func calculateHouses(input string) int {
 
 	return len(v)
 }
+
 // This was the winner's approach. Coded it in 28s. 👏️
 func calculateHousesWinner(input string) int {
 	var c[2]int
